@@ -238,16 +238,37 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  // Reset password
-  Future<bool> resetPassword(String email) async {
+// Reset password
+  Future<bool> resetPassword({required String email}) async {
     try {
       _setLoading(true);
       clearError();
 
+      debugPrint('🔄 AuthProvider: Sending password reset email to: $email');
+
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
 
       _setLoading(false);
+      debugPrint('✅ AuthProvider: Password reset email sent successfully');
       return true;
+    } on FirebaseAuthException catch (e) {
+      debugPrint('❌ AuthProvider: Reset password failed with FirebaseAuthException: ${e.code}');
+      _setLoading(false);
+
+      switch (e.code) {
+        case 'user-not-found':
+          _setError('Không tìm thấy tài khoản với email này.');
+          break;
+        case 'invalid-email':
+          _setError('Email không hợp lệ.');
+          break;
+        case 'too-many-requests':
+          _setError('Quá nhiều yêu cầu. Vui lòng thử lại sau.');
+          break;
+        default:
+          _setError('Có lỗi xảy ra khi gửi email. Vui lòng thử lại.');
+      }
+      return false;
     } catch (e) {
       debugPrint('❌ AuthProvider: Reset password failed: $e');
       _setError('Không thể gửi email reset password. Vui lòng thử lại.');

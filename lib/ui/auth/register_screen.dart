@@ -328,12 +328,15 @@ class _RegisterPageState extends State<RegisterPage> {
               color: const Color(0xFF979797),
             ),
           ),
-          const Text(
-            "hoặc",
-            style: TextStyle(
-              fontSize: 16,
-              fontFamily: "Lato",
-              color: Color(0xFF979797),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Text(
+              "hoặc",
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: "Lato",
+                color: Color(0xFF979797),
+              ),
             ),
           ),
           Expanded(
@@ -437,21 +440,21 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              "assets/images/social_apple_logo.png",
-              width: 24,
-              height: 24,
-              fit: BoxFit.fill,
+            const Icon(
+              Icons.apple,
+              size: 24,
+              color: Colors.white,
             ),
-            Container(
-              margin: const EdgeInsets.only(left: 10),
-              child: const Text(
+            const SizedBox(width: 10),
+            const Flexible(
+              child: Text(
                 "Đăng ký với Apple",
                 style: TextStyle(
                   fontSize: 16,
                   fontFamily: "Lato",
                   color: Colors.white,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],

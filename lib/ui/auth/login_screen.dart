@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uptodo/ui/auth/register_screen.dart';
+import 'package:uptodo/ui/auth/forgot_password_screen.dart'; // Thêm import này
 import 'package:uptodo/ui/home/home_screen.dart';
 import 'package:uptodo/providers/auth_provider.dart';
 
@@ -114,6 +115,7 @@ class _LoginPageState extends State<LoginPage> {
             _buildEmailField(),
             const SizedBox(height: 25),
             _buildPasswordField(),
+            _buildForgotPasswordButton(), // Thêm nút quên mật khẩu
             _buildLoginButton(authProvider),
           ],
         ),
@@ -226,11 +228,38 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  // Thêm method này để xử lý nút quên mật khẩu
+  Widget _buildForgotPasswordButton() {
+    return Container(
+      margin: const EdgeInsets.only(top: 16),
+      alignment: Alignment.centerRight,
+      child: TextButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ForgotPasswordPage(),
+            ),
+          );
+        },
+        child: Text(
+          "Quên mật khẩu?",
+          style: TextStyle(
+            fontSize: 14,
+            fontFamily: "Lato",
+            color: Colors.white.withOpacity(0.67),
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildLoginButton(AuthProvider authProvider) {
     return Container(
       width: double.infinity,
       height: 48,
-      margin: const EdgeInsets.only(top: 70),
+      margin: const EdgeInsets.only(top: 40), // Giảm margin từ 70 xuống 40
       child: ElevatedButton(
         onPressed: authProvider.isLoading ? null : () => _onHandleLoginSubmit(authProvider),
         style: ElevatedButton.styleFrom(
