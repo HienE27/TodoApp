@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "693334397202",
+    "firebase_url": "https://flutter-todo-app-6c3c9-default-rtdb.firebaseio.com",
     "project_id": "flutter-todo-app-6c3c9",
     "storage_bucket": "flutter-todo-app-6c3c9.firebasestorage.app"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "693334397202-l00rfl7hlhqo883fokhagdtked7l398j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uptodo",
+            "certificate_hash": "4d4c13e51aebbe9816f732f8879ee870542f4b3f"
+          }
+        },
         {
           "client_id": "693334397202-mu5mnsdkcvsu10ia5ggbrgm605436q7e.apps.googleusercontent.com",
           "client_type": 1,

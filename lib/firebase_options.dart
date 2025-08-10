@@ -46,6 +46,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '693334397202',
     projectId: 'flutter-todo-app-6c3c9',
     authDomain: 'flutter-todo-app-6c3c9.firebaseapp.com',
+    databaseURL: 'https://flutter-todo-app-6c3c9-default-rtdb.firebaseio.com',
     storageBucket: 'flutter-todo-app-6c3c9.firebasestorage.app',
     measurementId: 'G-RE69YM55P8',
   );
@@ -55,6 +56,7 @@ class DefaultFirebaseOptions {
     appId: '1:693334397202:android:3e96994bd194861727a3cb',
     messagingSenderId: '693334397202',
     projectId: 'flutter-todo-app-6c3c9',
+    databaseURL: 'https://flutter-todo-app-6c3c9-default-rtdb.firebaseio.com',
     storageBucket: 'flutter-todo-app-6c3c9.firebasestorage.app',
   );
 
@@ -63,7 +65,10 @@ class DefaultFirebaseOptions {
     appId: '1:693334397202:ios:d0cc69141c38b3a727a3cb',
     messagingSenderId: '693334397202',
     projectId: 'flutter-todo-app-6c3c9',
+    databaseURL: 'https://flutter-todo-app-6c3c9-default-rtdb.firebaseio.com',
     storageBucket: 'flutter-todo-app-6c3c9.firebasestorage.app',
+    androidClientId: '693334397202-mu5mnsdkcvsu10ia5ggbrgm605436q7e.apps.googleusercontent.com',
+    iosClientId: '693334397202-f03ssskcr4etduanpgf712aqhudpovhr.apps.googleusercontent.com',
     iosBundleId: 'com.example.uptodo',
   );
 
@@ -72,7 +77,10 @@ class DefaultFirebaseOptions {
     appId: '1:693334397202:ios:d0cc69141c38b3a727a3cb',
     messagingSenderId: '693334397202',
     projectId: 'flutter-todo-app-6c3c9',
+    databaseURL: 'https://flutter-todo-app-6c3c9-default-rtdb.firebaseio.com',
     storageBucket: 'flutter-todo-app-6c3c9.firebasestorage.app',
+    androidClientId: '693334397202-mu5mnsdkcvsu10ia5ggbrgm605436q7e.apps.googleusercontent.com',
+    iosClientId: '693334397202-f03ssskcr4etduanpgf712aqhudpovhr.apps.googleusercontent.com',
     iosBundleId: 'com.example.uptodo',
   );
 
@@ -82,7 +90,9 @@ class DefaultFirebaseOptions {
     messagingSenderId: '693334397202',
     projectId: 'flutter-todo-app-6c3c9',
     authDomain: 'flutter-todo-app-6c3c9.firebaseapp.com',
+    databaseURL: 'https://flutter-todo-app-6c3c9-default-rtdb.firebaseio.com',
     storageBucket: 'flutter-todo-app-6c3c9.firebasestorage.app',
     measurementId: 'G-VERBZQE41M',
   );
+
 }
